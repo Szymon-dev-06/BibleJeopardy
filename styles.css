@@ -1,0 +1,153 @@
+:root {
+	--green-color: rgb(70, 100, 70);
+	--green-color-variation1: rgb(50, 80, 50);
+	--green-color-variation2: rgb(35, 65, 40);
+	--beige-color: rgb(240, 230, 210);
+	--beige-color-variation1: rgb(220, 210, 190);
+	--beige-color-variation2: rgb(205, 195, 180);
+}
+
+.container {
+	margin: 0 auto;
+	width: 90vw;
+	height: 100vh;
+}
+
+@keyframes preloader {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+body {
+	margin: 0;
+	background-color: var(--beige-color);
+}
+
+th {
+	font-size: 2rem;
+}
+
+td {
+	font-size: 3rem;
+	text-align: center;
+	color: var(--beige-color);
+	background-color: var(--green-color);
+}
+
+td:hover {
+	cursor: pointer;
+	color: var(--green-color);
+	background-color: var(--beige-color-variation1);
+}
+
+td:active {
+	background-color: var(--beige-color-variation2);
+}
+
+button {
+	padding: 0;
+	font-size: 3rem;
+	border: none;
+	cursor: pointer;
+	background-color: inherit;
+}
+
+p {
+	margin: 0;
+	color: var(--green-color);
+	grid-area: 2 / 1 / 3 / 3;
+}
+
+.greeting-gameTitle {
+	margin: 0;
+	font-size: 5rem;
+	color: var(--green-color);
+}
+
+.greeting-campName {
+	margin: 0;
+	font-size: 2rem;
+	color: var(--green-color);
+}
+
+.preloader {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	animation: preloader 4s forwards;
+}
+
+.game-box {
+	width: 100%;
+	height: 100%;
+	transition: opacity 2s else-in-out;
+}
+
+.showQuestion {
+	width: 90%;
+	height: 100vh;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 50% 40% 10%;
+	justify-items: center;
+	align-items: center;
+	transform: translate(-50%, -50%);
+	background-color: var(--beige-color-variation2);
+}
+
+.question-text {
+	width: 90%;
+	display: inline;
+	position: relative;
+	grid-area: 1 / 1 / 2 / 3;
+	text-align: center;
+	font-size: 3rem;
+	color: var(--green-color);
+}
+
+.hidden {
+	display: none;
+}
+
+.true-button {
+	color: var(--beige-color-variation1);
+	background-color: var(--green-color);
+}
+
+.true-button:hover {
+	background-color: var(--green-color-variation1);
+}
+
+.true-button:active {
+	background-color: var(--green-color-variation2);
+}
+
+.false-button {
+	color: var(--green-color);
+	background-color: var(--beige-color-variation2);
+}
+
+.button-container {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	grid-area: 3 / 1 / 4 / 3;
+}
+
+.answer-text {
+	font-size: 3rem;
+	grid-area: 2 / 1 / 3 / 3;
+}

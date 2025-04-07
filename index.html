@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="icon" href="icons/favicon.png" />
+		<meta charset="UTF-8" />
+		<base href='https://sjemion-dev.github.io/Jeopardy-game/'>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>jeopardy-game_Sola Scriptura 2025</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="scriptc.js" defer></script>
+	</head>
+	<body>
+		<div class="container">
+			<div id="preloader" class="preloader">
+				<h1 class="greeting-gameTitle">JEOPARDY GAME</h1>
+				<p class="greeting-campName">SOLA SCRIPTURA 7-10 APRIL 2025</p>
+			</div>
+			<table id="game-box" class="game-box hidden">
+				<thead>
+					<tr>
+						<th>география/Биология/Числа</th>
+						<th>дополни стих</th>
+						<th>пророки</th>
+						<th>разное</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td onclick='questionClick(0, "100", 0)'>100</td>
+						<td onclick='questionClick(1, "100", 0)'>100</td>
+						<td onclick='questionClick(2, "100", 0)'>100</td>
+						<td onclick='questionClick(3, "100", 0)'>100</td>
+					</tr>
+					<tr>
+						<td onclick='questionClick(0, "200", 0)'>200</td>
+						<td onclick='questionClick(1, "200", 0)'>200</td>
+						<td onclick='questionClick(2, "200", 0)'>200</td>
+						<td onclick='questionClick(3, "200", 0)'>200</td>
+					</tr>
+					<tr>
+						<td onclick='questionClick(0, "300", 0)'>300</td>
+						<td onclick='questionClick(1, "300", 0)'>300</td>
+						<td onclick='questionClick(2, "300", 0)'>300</td>
+						<td onclick='questionClick(3, "300", 0)'>300</td>
+					</tr>
+					<tr>
+						<td onclick='questionClick(0, "400", 0)'>400</td>
+						<td onclick='questionClick(1, "400", 0)'>400</td>
+						<td onclick='questionClick(2, "400", 0)'>400</td>
+						<td onclick='questionClick(3, "400", 0)'>400</td>
+					</tr>
+				</tbody>
+			</table>
+			<div id="showQuestion" class="showQuestion hidden">
+				<p id="question-text" class="question-text"></p>
+				<p id='answer-text' class='answer-text'></p>
+				<div class="button-container">
+					<button id="true-button" class="true-button" type="button">
+						Верно
+					</button>
+					<button id="answer-button" class="answer-button" type="button">
+						Ответ
+					</button>
+					<button id="close-button" class="false-button" type="button">
+						Закрыть
+					</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
