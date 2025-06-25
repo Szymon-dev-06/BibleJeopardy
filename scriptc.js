@@ -14,12 +14,11 @@ preloader.addEventListener('animationend', function () {
 
 let questionsDatabase = null
 
-fetch('questions.JSON')
+fetch('questions1.JSON')
 	.then(response => response.json())
 	.then(json => {
 		questionsDatabase = json
-	})
-
+})
 let questionIndices = {}
 let answerIndices = {}
 
