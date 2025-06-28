@@ -14,7 +14,7 @@ preloader.addEventListener('animationend', function () {
 
 let questionsDatabase = null
 
-fetch('questions1.JSON')
+fetch('questions.JSON')
 	.then(response => response.json())
 	.then(json => {
 		questionsDatabase = json
